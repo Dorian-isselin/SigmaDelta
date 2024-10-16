@@ -36,6 +36,12 @@ z=tf('z',ts);
 NTF=(1-z^-1)^2;
 STF=z^-2;
 
+% Paramètres de l'ao
+gain = 80;
+k = 10^(gain/20);
+GBW = 50e6;
+w0 = GBW/k;
+
 %% Simulation
 %============
 open('Model_SD_CIFB_k2.mdl');
